@@ -34,7 +34,7 @@ The expected minimum amount of time each Sprint for each category is as follows:
 | 10/1/24  | 4:55pm   | IM     |  Writing the program                       |     120     |
 | 10/2/24  | 2:00pm   | MTG    |  Team Review Meeting                       |     60      |
 | 10/3/24  | 9:38am   | IM     |  Creating the code                         |     43      |
-| 10/3/24  | 11:47am  | IM     |  Creating the code                         |             |
+| 10/3/24  | 11:47am  | IM     |  Creating the code                         |     224     |
 _Note: Add more rows as needed._
 
 ## Sprint Totals

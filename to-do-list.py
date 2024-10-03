@@ -24,33 +24,33 @@ def menu():
         print(f"{result.id} : {data}")
 
     # Display menu options
-    print("0. Add Project")
-    print("1. Delete Project")
-    print("2. Add Task")
-    print("3. Delete Task")
-    print("4. Update Task")
-    print("5. Quit")
+    print("1. Add Project")
+    print("2. Delete Project")
+    print("3. Add Task")
+    print("4. Delete Task")
+    print("5. Update Task")
+    print("6. Quit")
 
     # Get user input
     option = input("Please indicate choice: ")
 
     # Handle user input
-    if option == "0":
+    if option == "1":
         # Add a new project
         add_project()
-    elif option == "1":
+    elif option == "2":
         # Delete a project
         delete_project()
-    elif option == "2":
+    elif option == "3":
         # Add a new task to a project
         add_task()
-    elif option == "3":
+    elif option == "4":
         # Delete a task from a project
         delete_task()
-    elif option == "4":
+    elif option == "5":
         # Update a task in a project
         update_task()
-    elif option == "5":
+    elif option == "6":
         # Exit the program
         exit()
 
@@ -63,7 +63,7 @@ def add_project():
     name = input("Enter project name: ")
 
     # Get task order number and task from user
-    order = input("Enter task order number: ")
+    order = input("Enter task order number (ex. 1, 2, etc): ")
     task = input("Enter task: ")
 
     # Create a new document in the 'project' collection
@@ -98,7 +98,7 @@ def add_task():
     name = input("Enter project name: ")
 
     # Get task order number and task from user
-    order = input("Enter task order number: ")
+    order = input("Enter task order number (ex. 1, 2, etc): ")
     task = input("Enter task: ")
 
     # Update the document in the 'project' collection
@@ -116,7 +116,7 @@ def delete_task():
     name = input("Enter project name: ")
 
     # Get task order number from user
-    order = input("Enter task order number: ")
+    order = input("Enter task order number (ex. 1, 2, etc): ")
 
     # Delete the task from the document in the 'project' collection
     db.collection('project').document(name).update({order: firestore.DELETE_FIELD})
@@ -133,7 +133,7 @@ def update_task():
     name = input("Enter project name: ")
 
     # Get task order number and task from user
-    order = input("Enter task order number: ")
+    order = input("Enter task order number (ex. 1, 2, etc): ")
     task = input("Enter task: ")
 
     # Update the task in the document in the 'project' collection
