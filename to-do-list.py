@@ -6,7 +6,8 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-results = db.collection('project').document('chores').get()
-
-data = results.to_dict()
-print(data)
+results = db.collection('project').get()
+total = 0
+for result in results:
+    data = result.to_dict()
+    print(f"{result.id} : {data['name']}")

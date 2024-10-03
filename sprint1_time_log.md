@@ -31,7 +31,9 @@ The expected minimum amount of time each Sprint for each category is as follows:
 | 9/28/24  | 12:00pm  | TP     |  Research for team project                 |     60      |
 | 9/30/24  | 2:00pm   | TP     |  Working on Team Project                   |     60      |
 | 10/1/24  | 12:30pm  | IM     |  Reasearch and environment setup           |     195     |
-|          |          |        |                                            |             |
+| 10/1/24  | 4:55pm   | IM     |  Writing the program                       |     120     |
+| 10/2/24  | 2:00pm   | MTG    |  Team Review Meeting                       |     60      |
+| 10/3/24  | 9:38am   | IM     |  Creating the code                         |             |
 
 _Note: Add more rows as needed._
 
