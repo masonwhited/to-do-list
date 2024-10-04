@@ -2,6 +2,8 @@
 from tkinter import Menu  # Not used in this code snippet
 import firebase_admin
 from firebase_admin import credentials, firestore
+import os
+import platform
 
 # Initialize Firebase Admin SDK with credentials from a JSON file
 cred = credentials.Certificate("to-do-list.json")
@@ -10,11 +12,13 @@ firebase_admin.initialize_app(cred)
 # Create a client instance to interact with Firestore
 db = firestore.client()
 
-# Function to display the main menu
-def menu():
-    """
-    Displays the main menu and handles user input.
-    """
+def clear_terminal():
+    if platform.system() == "Windows":
+        os.system('cls')
+    else:
+        os.system('clear')
+
+def dictionary():
     # Retrieve all documents from the 'project' collection
     results = db.collection('project').get()
 
@@ -23,6 +27,13 @@ def menu():
         data = result.to_dict()
         print(f"{result.id} : {data}")
 
+# Function to display the main menu
+def menu():
+    """
+    Displays the main menu and handles user input.
+    """
+    clear_terminal()
+    dictionary()
     # Display menu options
     print("1. Add Project")
     print("2. Delete Project")
@@ -52,6 +63,7 @@ def menu():
         update_task()
     elif option == "6":
         # Exit the program
+        clear_terminal()
         exit()
 
 # Function to add a new project
@@ -59,6 +71,8 @@ def add_project():
     """
     Adds a new project to the 'project' collection.
     """
+    clear_terminal()
+    dictionary()
     # Get project name from user
     name = input("Enter project name: ")
 
@@ -80,6 +94,8 @@ def delete_project():
     """
     Deletes a project from the 'project' collection.
     """
+    clear_terminal()
+    dictionary()
     # Get project name from user
     name = input("Enter project name: ")
 
@@ -94,6 +110,8 @@ def add_task():
     """
     Adds a new task to a project in the 'project' collection.
     """
+    clear_terminal()
+    dictionary()
     # Get project name from user
     name = input("Enter project name: ")
 
@@ -112,6 +130,8 @@ def delete_task():
     """
     Deletes a task from a project in the 'project' collection.
     """
+    clear_terminal()
+    dictionary()
     # Get project name from user
     name = input("Enter project name: ")
 
@@ -129,6 +149,8 @@ def update_task():
     """
     Updates a task in a project in the 'project' collection.
     """
+    clear_terminal()
+    dictionary()
     # Get project name from user
     name = input("Enter project name: ")
 
