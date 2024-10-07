@@ -53,6 +53,6 @@ I found these websites useful in developing this software:
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [ ] Clear the screen after a menu item is chosen
-* [ ] Clear the screen before displaying the menu
+* [x] Clear the screen after a menu item is chosen
+* [x] Clear the screen before displaying the menu
 * [ ] Implement error prevention methods
